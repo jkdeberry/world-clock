@@ -11,7 +11,7 @@ function updateTime () {
     }
 
 
-    let parisElement = document.querySelector("#paris");
+  let parisElement = document.querySelector("#paris");
   if (parisElement) {
     let parisDateElement = parisElement.querySelector(".date");
     let parisTimeElement = parisElement.querySelector(".time");
@@ -20,7 +20,19 @@ function updateTime () {
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
     parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
     }
+
+
+  let saskatchewanElement = document.querySelector("#saskatchewan");
+  if (saskatchewanElement) {
+    let saskatchewanDateElement = saskatchewanElement.querySelector(".date");
+    let saskatchewanTimeElement = saskatchewanElement.querySelector(".time");
+    let saskatchewanTime = moment().tz("Canada/Saskatchewan");
+    
+    saskatchewanDateElement.innerHTML = saskatchewanTime.format("MMMM Do YYYY");
+    saskatchewanTimeElement.innerHTML = saskatchewanTime.format("h:mm:ss [<small>]A[</small>]");
+    }
   } 
+
 
   function updateCity(event) {
     let cityTimeZone = event.target.value;
