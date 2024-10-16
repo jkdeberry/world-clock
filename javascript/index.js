@@ -22,14 +22,14 @@ function updateTime () {
     }
 
 
-  let saskatchewanElement = document.querySelector("#saskatchewan");
-  if (saskatchewanElement) {
-    let saskatchewanDateElement = saskatchewanElement.querySelector(".date");
-    let saskatchewanTimeElement = saskatchewanElement.querySelector(".time");
-    let saskatchewanTime = moment().tz("Canada/Saskatchewan");
+  let portugalElement = document.querySelector("#portugal");
+  if (portugalElement) {
+    let portugalDateElement = portugalElement.querySelector(".date");
+    let portugalTimeElement = portugalElement.querySelector(".time");
+    let portugalTime = moment().tz("Portugal");
     
-    saskatchewanDateElement.innerHTML = saskatchewanTime.format("MMMM Do YYYY");
-    saskatchewanTimeElement.innerHTML = saskatchewanTime.format("h:mm:ss [<small>]A[</small>]");
+    portugalDateElement.innerHTML = portugalTime.format("MMMM Do YYYY");
+    portugalTimeElement.innerHTML = portugalTime.format("h:mm:ss [<small>]A[</small>]");
     }
   } 
 
